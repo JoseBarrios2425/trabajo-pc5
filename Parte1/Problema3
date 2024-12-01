@@ -1,0 +1,19 @@
+'''Referencias y asignación dinámica en Python:
+Implementa la función que acepte una lista de enteros, calcule su suma 
+y devuelva el resultado. El tamaño debe ser introducida por el usuario.
+'''
+def suma_lista(lista):
+    return sum(lista)
+
+# Pedir tamaño
+tamaño = int(input("Introduce el tamaño de la lista: "))
+
+# Asignación dinámica: Crear y rellenar la lista basada en la entrada del usuario
+numeros = []  # La lista se crea vacía
+for i in range(tamaño):
+    numero = int(input(f"Introduce el número {i + 1}: "))
+    numeros.append(numero)  # Los elementos se asignan dinámicamente en cada iteración
+
+# Calcular y mostrar la suma
+resultado = suma_lista(numeros)
+print(f"La suma de los elementos es: {resultado}")

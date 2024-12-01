@@ -1,0 +1,8 @@
+#Cadenas en Python:
+#Implementar una función que tome una cadena como parámetro y devuelva la cadena invertida.
+def invertir_cadena(cadena):
+    return cadena[::-1]
+
+texto = "Hola, mundo"
+print(f"Cadena original: {texto}")
+print(f"Cadena invertida: {invertir_cadena(texto)}")
