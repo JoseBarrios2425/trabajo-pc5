@@ -1,0 +1,28 @@
+'''Archivos en Python: Implemente un programa usando funciones para
+escribir datos en un archivo de texto
+'''
+
+def crear_archivo(nombre_archivo):
+    with open(nombre_archivo, 'w') as archivo:  # 'w' crea o sobreescribe el archivo
+        pass  # No escribe nada en este paso, solo crea el archivo
+
+def escribir_datos(nombre_archivo, datos):
+    with open(nombre_archivo, 'a') as archivo:  # 'a' abre el archivo para añadir contenido
+        for dato in datos:
+            archivo.write(dato + '\n')  # Escribe cada dato en una línea nueva
+
+# Nombre del archivo a crear
+nombre_archivo = "datos.txt"
+# Crear el archivo
+crear_archivo(nombre_archivo)
+
+# Datos a escribir en el archivo
+datos_a_escribir = [
+    "Hola mundo.",
+    "Código escrito en python"
+]
+
+# Escribir los datos en el archivo
+escribir_datos(nombre_archivo, datos_a_escribir)
+
+print(f"Se ha creado el archivo '{nombre_archivo}' y se han escrito los datos.")
