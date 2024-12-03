@@ -1,0 +1,366 @@
+
+\documentclass[12pt]{book}
+\usepackage{mhchem}
+\usepackage{graphicx}
+\usepackage{subfiles}
+\usepackage{parskip}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+\usepackage{fullpage}
+\usepackage{longtable}
+\usepackage{adjustbox}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{eso-pic}
+\usepackage{wrapfig}
+\hypersetup{
+    colorlinks=true,    
+    linkcolor=blue,     
+    citecolor=blue,     
+    urlcolor=blue       
+}
+\begin{document}
+\let\cleardoublepage\clearpage
+\subfile{caratula}
+
+\tableofcontents
+\chapter{Introducción}
+El presente informe detalla el desarrollo de un proyecto práctico en Python, estructurado en dos partes. La primera parte consiste en la resolución de seis ejercicios fundamentales que abarcan aspectos clave de la programación en Python, tales como el uso de funciones, el manejo de cadenas, la implementación de estructuras de datos, la manipulación de archivos y la definición de clases. Estos ejercicios están diseñados para consolidar los conocimientos adquiridos y poner en práctica conceptos esenciales del lenguaje.
+
+La segunda parte del proyecto consiste en la creación de un juego interactivo de "Piedra, Papel o Tijera", utilizando la librería random de Python para simular la elección de la computadora. Este componente del proyecto permite aplicar y reforzar los conceptos de lógica condicional, ciclos y generación de números aleatorios, proporcionando una experiencia más dinámica y divertida.
+
+A través de este proyecto, se busca consolidar los conocimientos básicos y avanzados necesarios para abordar problemas de programación más complejos en el futuro.
+
+
+\chapter {Objetivos}
+
+\begin{itemize}
+    \item Aprender cómo funciona Python, aplicando los conceptos de programación en C++ que aprendimos durante el curso, pero en un entorno más simple y accesible.
+    \item Ampliar mis habilidades de programación y obtener una nueva perspectiva sobre el uso de diferentes lenguajes de programación en proyectos reales. 
+    \item Utilizar adecuadamente repositorios (GitHub) para almacenar y gestionar proyectos, siguiendo buenas prácticas como incluir un archivo README.md, mantener un historial de commits claro, y organizar adecuadamente los archivos del proyecto. Además, utilizar un entorno adecuado para el desarrollo en Python, como Visual Studio Code.
+
+\end{itemize}
+
+\chapter{Desarrollo}
+
+\section{Parte 1}
+\subsection{Problema 1}
+Funciones en Python: Implementar una función recursiva que calcule el factorial de un número.
+
+Resolveremos este problema defininiendo una función con parametro n (número) con un caso base y un caso recursivo.
+
+Es importante tener en cuenta los siguientes conceptos:
+
+\begin{itemize}
+    \item En Python, las funciones se definen con la palabra clave def, seguida
+del nombre de la función y sus parámetros entre paréntesis
+ejem: def nombre(parametro).
+    \item En Python no es necesario definir explícitamente el tipo de variable en una función, ya 
+que Python es un lenguaje de tipado dinámico. Esto significa que las variables 
+adquieren su tipo en tiempo de ejecución según el valor que se les asigne.
+    \item Las f-strings (o formatted string literals) en Python son una forma sencilla y eficiente de incluir valores dentro de una cadena de texto, para usar una f-string, basta con colocar una f antes de las comillas de una cadena y encerrar las expresiones que deseas incluir en el texto dentro de llaves {}.
+
+\end{itemize}
+
+\subsection{Problema 2}
+Cadenas en Python: Implementar una función que tome una cadena como parámetro y devuelva la cadena invertida.
+
+Para resolver el problema definiremos una función invertirCadena donde utilizaremos el concepto de slicing (o corte).
+
+El slicing (o corte) en Python es una técnica que permite obtener partes (subconjuntos) de una secuencia, como cadenas de texto, listas, tuplas o cualquier objeto que implemente la interfaz de secuencia. Esto se realiza utilizando una notación especial con corchetes [] y dos puntos :.
+
+sintaxis básica:  secuencia[inicio:fin:paso]
+
+\begin{itemize}
+    \item inicio: Índice donde comienza el corte (incluido).
+    \item fin: Índice donde termina el corte (no incluido).
+    \item paso: Valor que indica cómo avanzar entre elementos (opcional).
+\end{itemize}
+
+El siguiente código muestra ejemplos de slicing en una cadena:
+
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=0.8
+        \textwidth]{cap1.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+
+
+
+\subsection{Problema 3}
+Referencias y asignación dinámica en Python: Implementa la función que acepte una lista de enteros, calcule su suma 
+y devuelva el resultado. El tamaño debe ser introducida por el usuario.
+
+Para resolver el problema utilizaremos un arreglo vacío y un bucle for para rellenar el arreglo en cada iteración, la suma la hallaremos definiendo una función sumLista que sumará todos los valores de nuestro arreglo.
+
+La asignación de memoria dinámica en Python es un proceso automatizado que gestiona el intérprete de Python. Esto significa que el programador no necesita reservar ni liberar memoria manualmente, como ocurre en C++.
+
+\subsection{Problema 4}
+Estructuras en Python: Escribir un programa que permita representar puntos en el plano 
+y además implemente una función para calcular la distancia entre dos puntos.
+
+Resolveremos el problema creando una clase para representar el punto en el plano con un método para calcular la distancia entre los dos puntos utilizando la fórmula de la distancia euclidiana.
+
+En Python, las estructuras (struct) como las de C++ no existen directamente. Sin embargo, hay alternativas que permiten organizar datos de manera similar a las estructuras de C++. Por ejemplo, utilizando clases de equivalencia.
+
+La siguiente imagen muestra el ejemplo de una clase en python
+
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=0.8
+        \textwidth]{cap4.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+\subsection{Problema 5}
+Archivos en Python: Implemente un programa usando funciones para escribir datos en un archivo de texto.
+
+Para resolver el problema, definiremos una función para crear el archivo de texto y otra para escribir dentro del archivo de texto.
+
+En Python, trabajar con archivos de texto es sencillo gracias a las funciones integradas. Puedes crear, leer y escribir archivos utilizando la función open().
+
+Modos de apertura en open():
+\begin{itemize}
+    \item r: Solo lectura (da error si el archivo no existe).
+    \item W: Escritura, sobrescribe el archivo si existe o lo crea si no.
+    \item a: Añadir al final del archivo, sin borrar el contenido existente.
+\end{itemize}
+
+La siguiente imagen muestra el ejemplo de como crear, escribir y leer un archivo en python
+
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=0.8
+        \textwidth]{cap5.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+\subsection{Problema 6}
+Clases en python: Definir una clase Persona con atributos nombre y edad, y un método para mostrar estos datos.
+
+Las clases en Python son plantillas para crear objetos. Un objeto es una instancia de una clase, y las clases nos permiten agrupar datos y comportamientos (métodos) bajo un mismo nombre, lo que ayuda a organizar y estructurar el código.
+
+Para crear una clase, usamos la palabra clave class, seguida del nombre de la clase, y luego los métodos dentro de un bloque de código. Los métodos de una clase son funciones definidas dentro de ella.
+
+\section{Parte 2}
+Para realizar el juego, definiremos una función llamada play donde pediremos al usuario que elija entre r(piedra), p(papel) o s(tijera) y le asignaremos igualmente un valor aleatorio a una variable computer, luego compararemos las respuestas de ambos para obtener al ganador para comparar definiremos la función win.
+
+En Python, los valores aleatorios se pueden generar utilizando el módulo random, que proporciona varias funciones para trabajar con números aleatorios. Este módulo se utiliza para generar valores aleatorios dentro de un rango específico, mezclar secuencias de datos, seleccionar elementos de manera aleatoria, etc.
+
+Funciones principales del modulo random
+
+\begin{itemize}
+    \item Generar un número aleatorio entre un rango específico: randint(a, b)
+    \item Elije un numero aleatorio de una lista o secuencia: choice(sequence)
+    \item Mezclar una lista aleatoriamente:shuffle(sequence)
+    \item Generar números aleatorios de una distribución específica: gauss(mu, sigma)
+\end{itemize}
+
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=0.8
+        \textwidth]{Cap7.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+
+\newpage
+
+\chapter{Resultados}
+\section{Parte 1}
+\subsection{Problema 1}
+Código final del problema 1:
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=0.8
+        \textwidth]{p1.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+
+Sálida del código 1:
+
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=0.6
+        \textwidth]{s1.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+
+\newpage
+
+\subsection{Problema 2}
+Código final del problema 2:
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=0.8
+        \textwidth]{p2.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+
+Sálida del código 2:
+
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=0.5
+        \textwidth]{s2.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+
+\subsection{Problema 3}
+Código final del problema 3:
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=0.8
+        \textwidth]{p3.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+
+\newpage
+Sálida del código 3:
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=0.5
+        \textwidth]{s3.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+
+\subsection{Problema 4}
+Código final del problema 4:
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=0.8
+        \textwidth]{p4.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+
+Sálida del código 4:
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=0.5
+        \textwidth]{s4.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+\newpage
+
+\subsection{Problema 5}
+
+Código final del problema 5:
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=0.8
+        \textwidth]{p5.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+
+Sálida del código 5:
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=0.7
+        \textwidth]{s5.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+
+\subsection{Problema 6}
+Código final del problema 6:
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=0.8
+        \textwidth]{p6.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+\newpage
+Sálida del código 6:
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=0.5
+        \textwidth]{s6.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+
+\section{Parte 2}
+Código final del juego "Piedra, papel o tijera":
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=1.1
+        \textwidth]{p7.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+
+Sálida del código:
+\begin{figure}[h]
+    \begin{minipage}{\textwidth}
+    \centering
+        \includegraphics[width=1.1
+        \textwidth]{s7.png}
+        \label{fig:mii_graficoo}
+    \end{minipage}
+\end{figure}
+
+
+\newpage
+
+
+
+\chapter{Conclusiones}
+\begin{itemize}
+    \item El proyecto permitió aplicar conceptos clave de programación en Python, como funciones, estructuras de datos, manejo de archivos y clases, mientras se exploraban similitudes con C++.
+    \item La integración con GitHub y el uso de un entorno como Visual Studio Code fomentaron buenas prácticas de desarrollo.
+    \item Python ofrece varios beneficios sobre C++ gracias a su simplicidad y productividad. Su sintaxis más legible facilita el aprendizaje y reduce los errores comunes. También cuenta con una amplia gama de bibliotecas para tareas como inteligencia artificial, ciencia de datos y desarrollo web, lo que acelera el desarrollo de proyectos. Sin embargo, C++ sigue siendo más eficiente en términos de rendimiento y control de bajo nivel.
+    
+\end{itemize}
+
+
+\chapter{Referencias}
+\begin{enumerate}
+    \item Programación ATS. (2018). Programación ATS. YouTube. 
+    
+    https://www.youtube.com/c/ProgramacionATS
+
+    \item freeCodeCamp.org. (2017). freeCodeCamp.org. YouTube.
+    
+    https://www.youtube.com/c/freecodecamp
+
+    \item Lospinoso, J. (2019). C++ Crash Course A Fast-Paced Introduction. No starch press San Francisco.
+
+    \item El Libro de Python. (n.d.). Sintaxis en Python. El Libro De Python. 
+    
+    https://ellibrodepython.com/sintaxis-python
+    
+\end{enumerate}
+
+\end{document}
