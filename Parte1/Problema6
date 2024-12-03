@@ -1,4 +1,5 @@
-'''Clases en python:
+'''
+Clases en python:
 Definir una clase Persona con atributos nombre y edad, y un método para mostrar estos datos.
 '''
 class Persona:
@@ -10,4 +11,5 @@ class Persona:
         print(f"Nombre: {self.nombre}, Edad: {self.edad}")
 
 persona1 = Persona("Juan", 25)  # Crear una instancia de Persona
-persona1.mostrar_datos()       # Llamar al método para mostrar los datos
+persona1.mostrar_datos()        # Llamar al método para mostrar los datos
+

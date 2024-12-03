@@ -1,11 +1,25 @@
-#Funciones en Python:
-#Implementar una función recursiva que calcule el factorial de un número.
+'''
+Funciones en Python:
+Implementar una función recursiva que calcule el factorial de un número.
+'''
+
+'''En Python, las funciones se definen con la palabra clave def, seguida
+del nombre de la función y sus parámetros entre paréntesis
+ejem: def nombre(parametro): '''
+
 def factorial(n):
     if n == 0 or n == 1: # Caso base
         return 1
-    else: # Caso recursivo
+    else:                # Caso recursivo
         return n * factorial(n - 1)
 
 #Función en uso
 numero = 5
 print(f"El factorial de {numero} es: {factorial(numero)}")
+#Utilizamos f-strings, que permiten insertar variables dentro de cadenas de texto.
+
+'''
+Python no es necesario definir explícitamente el tipo de variable en una función, ya 
+que Python es un lenguaje de tipado dinámico. Esto significa que las variables 
+adquieren su tipo en tiempo de ejecución según el valor que se les asigne.
+'''

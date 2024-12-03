@@ -1,7 +1,10 @@
-#Cadenas en Python:
-#Implementar una función que tome una cadena como parámetro y devuelva la cadena invertida.
+'''
+Cadenas en Python:
+Implementar una función que tome una cadena como parámetro y devuelva la cadena invertida.
+'''
+
 def invertir_cadena(cadena):
-    return cadena[::-1]
+    return cadena[::-1] #Utilizamos el concepto de slicing(o corte)
 
 texto = "Hola, mundo"
 print(f"Cadena original: {texto}")

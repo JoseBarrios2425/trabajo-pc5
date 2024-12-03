@@ -1,10 +1,11 @@
-'''Archivos en Python: Implemente un programa usando funciones para
-escribir datos en un archivo de texto
+'''
+Archivos en Python: 
+Implemente un programa usando funciones para escribir datos en un archivo de texto
 '''
 
 def crear_archivo(nombre_archivo):
     with open(nombre_archivo, 'w') as archivo:  # 'w' crea o sobreescribe el archivo
-        pass  # No escribe nada en este paso, solo crea el archivo
+        pass  
 
 def escribir_datos(nombre_archivo, datos):
     with open(nombre_archivo, 'a') as archivo:  # 'a' abre el archivo para añadir contenido
@@ -26,3 +27,12 @@ datos_a_escribir = [
 escribir_datos(nombre_archivo, datos_a_escribir)
 
 print(f"Se ha creado el archivo '{nombre_archivo}' y se han escrito los datos.")
+
+'''
+Python tiene una sintaxis más simple y directa para trabajar con archivos. Usamos 
+with open(...) para abrir y trabajar con archivos, lo cual automáticamente maneja el cierre 
+del archivo. Esto hace que el código sea más limpio y seguro.
+En C++, el manejo de archivos se hace a través de flujos de entrada y 
+salida (ifstream, ofstream, fstream). Para abrir y escribir en un archivo, necesitas 
+crear un objeto de flujo y luego abrir el archivo explícitamente.
+'''

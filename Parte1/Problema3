@@ -1,4 +1,5 @@
-'''Referencias y asignación dinámica en Python:
+'''
+Referencias y asignación dinámica en Python:
 Implementa la función que acepte una lista de enteros, calcule su suma 
 y devuelva el resultado. El tamaño debe ser introducida por el usuario.
 '''
@@ -17,3 +18,17 @@ for i in range(tamaño):
 # Calcular y mostrar la suma
 resultado = suma_lista(numeros)
 print(f"La suma de los elementos es: {resultado}")
+
+'''
+Sintaxis del bucle for en python:
+
+for variable in secuencia:
+    # código
+
+Variable: Es una variable que toma el valor de cada elemento de la secuencia en cada iteración.
+Secuencia: Es la colección de elementos que quieres recorrer.
+
+En Python, la memoria se gestiona automáticamente.
+En cambio, en C++ el programador tiene control total usando new y delete, lo que permite 
+una gestión más eficiente pero propensa a errores como fugas de memoria. 
+'''
