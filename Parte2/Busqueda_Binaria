@@ -7,7 +7,7 @@ def Busqueda_Binaria(l,clave,inicio=None,final=None) :
             final = len(l)-1 
         if inicio>final :
             return -1 
-        medio=(inicio + final )//2 
+        medio=(inicio + final )//2  #division entera 
         if l[medio] == clave : 
             return medio
         elif clave < l[medio]:
