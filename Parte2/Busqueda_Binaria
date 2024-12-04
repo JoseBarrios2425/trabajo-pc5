@@ -1,0 +1,26 @@
+#Algoritmo de Busqueda Binaria
+#Se necesita tener una lista ordenada
+def Busqueda_Binaria(l,clave,inicio=None,final=None) :
+        if inicio is None :
+            inicio = 0 
+        if final is None :
+            final = len(l)-1 
+        if inicio>final :
+            return -1 
+        medio=(inicio + final )//2 
+        if l[medio] == clave : 
+            return medio
+        elif clave < l[medio]:
+            return Busqueda_Binaria(l,clave,inicio,medio-1)
+        else :
+            #clave > l[medio]
+            return Busqueda_Binaria(l,clave,medio+1,final)
+if __name__ == '__main__' : 
+     l = [1,2,4,5,7,8,9,10,12,13]
+     print(l)
+     clave = int(input("Ingrese el valor que desea buscar "))
+     posicion = Busqueda_Binaria(l,clave)
+     if posicion == -1 :
+         print("El elemento no se encuentra en el arreglo")
+     else :
+         print("El elemento se encuentra en la posicion",posicion+1,"del arreglo")
